@@ -2,9 +2,11 @@ package br.com.res.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,7 +22,7 @@ public class ProdutoResource {
 	
 
 	
-	public ResponseEntity<List<Produto>> obterListaProduto(){
+	@GetMapping("/produto")public ResponseEntity<List<Produto>> obterListaProduto(){
 		return new ResponseEntity<List<Produto>>(service.listarTodos(), HttpStatus.OK);
 	}
 	

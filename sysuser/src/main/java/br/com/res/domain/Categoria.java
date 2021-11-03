@@ -8,8 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
-import javax.persistence.OneToMany;
+
 
 
 @Entity
@@ -22,7 +23,7 @@ public class Categoria {
 	private Integer id;
 	private String nome;
 	
-	@OneToMany
+	@ManyToMany
 	private Produto produto;
 	
 	
